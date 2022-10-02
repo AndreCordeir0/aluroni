@@ -9,7 +9,6 @@ function App() {
     <>
 
   <div>
-    React
     <Cardapio/>
   </div>
     <GlobalStyle/>
