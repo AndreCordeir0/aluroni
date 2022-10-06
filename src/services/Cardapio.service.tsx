@@ -1,6 +1,12 @@
 import axios from "axios";
-export function CardapioService(){
-    axios.get('https://api.github.com/users/AndreCordeir0', { params: { answer: 42 } }).then(response=>{
+export async function CardapioService(){
+    const url = "http://localhost:8080"
+
+    await axios.get(`${url}/cardapio`)
+    .then(response=>{
         console.log(response);
+    }).catch((err)=>{
+        console.log(JSON.stringify(err));
     })
+
 }
